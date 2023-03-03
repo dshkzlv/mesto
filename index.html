@@ -28,42 +28,42 @@
             <img class="element__photo" src="./images/karachaevsk.png" alt="Карачаевск.">
             <div class="element__text">
               <h3 class="element__title">Карачаевск</h3>
-              <img class="element__like" src="./images/like-off.svg" alt="Лайк.">
+              <div class="element__like_off" id="heart_1" onclick="changeLike(1)"></div>
           </div>
         </div> 
         <div class="element">
             <img class="element__photo" src="./images/elbrus.png" alt="Гора Эльбрус.">
             <div class="element__text">
               <h3 class="element__title">Гора Эльбрус</h3>
-              <img class="element__like" src="./images/like-off.svg" alt="Лайк.">
+              <div class="element__like_off" id="heart_2" onclick="changeLike(2)"></div>
             </div>
         </div>
         <div class="element">
             <img class="element__photo" src="./images/dombai.png" alt="Домбай.">
             <div class="element__text">
               <h3 class="element__title">Домбай</h3>
-              <img class="element__like" src="./images/like-off.svg" alt="Лайк.">
+              <div class="element__like_off" id="heart_3" onclick="changeLike(3)"></div>
             </div>
         </div>
         <div class="element">
             <img class="element__photo" src="./images/elbrus.png" alt="Гора Эльбрус.">
             <div class="element__text">
               <h3 class="element__title">Гора Эльбрус</h3>
-              <img class="element__like" src="./images/like-off.svg" alt="Лайк.">
+              <div class="element__like_off" id="heart_4" onclick="changeLike(4)"></div>
             </div>
         </div>
         <div class="element">
             <img class="element__photo" src="./images/dombai.png" alt="Домбай.">
             <div class="element__text">
               <h3 class="element__title">Домбай</h3>
-              <img class="element__like" src="./images/like-off.svg" alt="Лайк.">
+              <div class="element__like_off" id="heart_5" onclick="changeLike(5)"></div>
             </div>
         </div>
         <div class="element">
             <img class="element__photo" src="./images/karachaevsk.png" alt="Карачаевск.">
             <div class="element__text">
               <h3 class="element__title">Карачаевск</h3>
-              <img class="element__like" src="./images/like-off.svg" alt="Лайк.">
+              <div class="element__like_off" id="heart_6" onclick="changeLike(6)"></div>
             </div>
         </div>
       </div>
@@ -72,5 +72,19 @@
   <footer class="footer">
     <p class="footer__text">&#169; 2023 Mesto Russia</p>
   </footer>
+
+  <div class="popup popup_edit">
+    <div class="popup__conteiner">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <button class="popup__btn-close" type="button"></button>
+      <form action="#" name="user-data" class="popup__form">
+        <input name="username" class="popup__input popup__input_edit_name" type="text" placeholder="Имя">
+        <input name="description" class="popup__input popup__input_edit_description" type="text" placeholder="О себе">
+        <button class="popup__btn-submit" type="submit" value="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <script defer src="index.js"></script>
 </body>
 </html>

@@ -92,6 +92,7 @@
 .profile__title-btn {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 @media screen and (max-width: 640px) {
@@ -156,7 +157,7 @@
     border: none;
     cursor: pointer;
     transition: 0.5s ease-in-out;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
 }
 
 .profile__edit-button:hover {
@@ -248,7 +249,6 @@
     height: 282px;
     display: block;
     border-radius: 10px 10px 0 0;
-    cursor: pointer;
 }
 
 .element__text {
@@ -266,10 +266,33 @@
     line-height: 29px;
     color: #000000;
     margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.element__like {
+.element__like_off {
     width: 22px;
+    height: 22px;
+    background-image: url(./images/like-off.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.element__like_off:hover {
+    opacity: 0.5;
+}
+
+.element__like_on {
+    width: 22px;
+    height: 22px;
+    background-image: url(./images/like-on.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    align-self: flex-end;
 }
 
 .footer {
@@ -299,11 +322,178 @@
     line-height: 22px;
     color: #545454;
     align-self: flex-start;
+    margin: 0;
 }
 
 @media screen and (max-width: 640px) {
     .footer__text {
         font-size: 14px;
         line-height: 17px;
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+
+.popup__conteiner {
+    width: 430px;
+    height: 330px;
+    background-color: #ffffff;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    margin: auto;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__conteiner {
+        width: 282px;
+        height: 332px;
+    }
+}
+
+.popup__title {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: 0 0 54px auto;
+    padding-top: 34px;
+    padding-left: 36px;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__title {
+        max-width: 238px;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+        padding: 0;
+        margin: 25px auto 75px;
+        white-space: nowrap; 
+        letter-spacing: -0.5px;
+    }
+}
+
+.popup__input {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.popup__input_edit_name {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid hsla(0, 100%, 0%, .2);
+    background: transparent;
+    width: 358px;
+    margin: 0 0 30px 36px;
+    display: flex;
+    padding: 0 0 13px 0;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__input_edit_name {
+        width: 238px;
+        margin: 0 22px 43px;
+        padding-bottom: 13px;
+    }
+}
+
+.popup__input_edit_description {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid hsla(0, 100%, 0%, .2);
+    background: transparent;
+    width: 358px;
+    margin: 0 0 48px 36px;
+    display: flex;
+    padding: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__input_edit_description {
+        width: 238px;
+        margin: 0 22px 43px;
+    }
+}
+
+.popup__btn-submit {
+    width: 358px;
+    border-radius: 2px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 14px 124px 18px;
+    margin: 0 auto 37px 36px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.popup__btn-submit:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__btn-submit {
+        width: 238px;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 14px 82px;
+        margin: 0 22px 25px;
+    }
+}
+
+.popup__btn-close {
+    background-image: url(./images/close-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    transition: 0.5 ease-in-out;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
+
+.popup__btn-close:hover {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__btn-close {
+        width: 20px;
+        height: 20px;
+        top: -35px;
+        right: 0;
     }
 }
