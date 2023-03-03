@@ -1,0 +1,17 @@
+.popup__input_edit_description {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid hsla(0, 100%, 0%, .2);
+    background: transparent;
+    width: 358px;
+    margin: 0 0 48px 36px;
+    display: flex;
+    padding: 0;
+}
+
+@media screen and (max-width: 640px) {
+    .popup__input_edit_description {
+        width: 238px;
+        margin: 0 22px 43px;
+    }
+}
