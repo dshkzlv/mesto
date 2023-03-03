@@ -42,8 +42,8 @@ function changeLike(num) {
     let liked = document.getElementById(`heart_${num}`);
 
     if(liked.className === "element__like_off") {
-        liked.className = "element__like_on";
+        liked.className = "element__like-on";
     } else {
-        liked.className = "element__like_off";
+        liked.className = "element__like-off";
     }
 }

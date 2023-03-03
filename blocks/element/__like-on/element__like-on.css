@@ -1,13 +1,9 @@
-.element__like_off {
+.element__like-on {
     width: 22px;
     height: 22px;
-    background-image: url(../../../images/like-off.svg);
+    background-image: url(../../../images/like-on.png);
     background-repeat: no-repeat;
     background-size: contain;
     cursor: pointer;
     align-self: flex-end;
-}
-
-.element__like_off:hover {
-    opacity: 0.5;
 }
