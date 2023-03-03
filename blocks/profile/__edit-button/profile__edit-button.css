@@ -2,7 +2,7 @@
     width: 24px;
     height: 24px;
     align-self: center;
-    background: transparent url(./images/Edit-Btn.svg);
+    background: transparent url(../../../images/edit-btn.svg);
     background-size: contain;
     background-repeat: no-repeat;
     border: none;
