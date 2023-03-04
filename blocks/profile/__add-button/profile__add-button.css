@@ -8,6 +8,7 @@
     cursor: pointer;
     transition: 0.5s ease-in-out;
     padding: 0;
+    align-self: center;
 }
 
 .profile__add-button:hover {
@@ -16,9 +17,10 @@
 
 @media screen and (max-width: 940px) {
     .profile__add-button {
-      position: absolute;
       top: 100px;
       right: 15px;
+      display: flex;
+      align-self: center;
     }
 }
 

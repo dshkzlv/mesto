@@ -10,7 +10,7 @@ let descriptionInput = popupForm.querySelector('.popup__input_edit_description')
 let submitBtn = popupForm.querySelector('.popup__btn-submit');
 
 editProfile.onclick = function closePopup() {
-    popup.style.display = "block";
+    popup.style.display = "flex";
     nameInput.value = profileTitle.textContent;
     descriptionInput.value = profileSubtitle.textContent;
 }
@@ -41,7 +41,7 @@ popupForm.addEventListener('submit', handleFormSubmit);
 function changeLike(num) {
     let liked = document.getElementById(`heart_${num}`);
 
-    if(liked.className === "element__like_off") {
+    if(liked.className === "element__like-off") {
         liked.className = "element__like-on";
     } else {
         liked.className = "element__like-off";
